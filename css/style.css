@@ -1,0 +1,91 @@
+@import url('./normalize.css');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--main-font-size);
+}
+
+.container {
+    width: 970px;
+    margin: 0 auto;
+}
+
+.header {
+    /* margin: auto 15px; */
+    /* background: #697372; */
+} 
+
+.nav {
+    border-bottom: 1px solid #828282;
+    padding: 28px 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #828282;
+    transition: all 0.3s;
+}
+
+.menu__link:hover {
+    color: #070707;
+}
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    border: 1px solid #41a59d;
+
+    min-width: 380px;
+    padding: 24px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 8px;
+    background: linear-gradient(205deg, #0e272e, #9be2ed);
+    box-shadow: 3px 4px 9px 4px #346064;
+}
+
+.form__label {
+    margin-bottom: 8px;
+}
+
+.form__input,
+.form__select {
+    margin-bottom: 20px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #879594;
+}
+
+.gender__item {
+    display: flex;
+    gap: 5vw;
+    justify-content: space-around;
+}
+.gender__item label {
+    display: flex;
+    align-items: center;
+}
+
+.gender__check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #ffffffe0;
+    border: 1px solid #d0c2c2;
+    border-radius: 50%; 
+}
