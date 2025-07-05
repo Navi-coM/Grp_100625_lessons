@@ -1,0 +1,77 @@
+@import url('./normalize.css');
+@import url('./vars.css');
+
+
+/* display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+   flex-basis: 100xp
+   flex-wrap
+   flex-grow
+   order*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--main-font-size);
+    color: var(--text-font-color);
+    min-height: 100vh;
+    background: linear-gradient(#eae4e6, #12ccd1);
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+.flex-container_col {
+    align-items: flex-start;
+}
+.header {
+    padding: 20px 0;
+    background: #ffddff;
+}
+
+.menu {
+    display: flex;
+    /* display: inline-flex; */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: var(--text-font-color);
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+/* .logo {
+  order: 1;
+}
+.buttons {
+  order: -1;
+} */
+
