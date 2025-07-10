@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Tourney:ital,wght@0,600;1,600&display=swap');
+@import url('./fonts.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    font-size: 28px;
+    font-family: "PT Sans", serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 13px 0;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.lang {
+    margin-right: 50px;
+}
+
+.lang__item {
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__link {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 0.785rem;
+    color: #000;
+}
+
+.text {
+    font-family: 'PTSans Regular', sans-serif;
+    font-size: 18px;
+}
