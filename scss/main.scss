@@ -1,0 +1,79 @@
+@import 'vars';
+@import 'extends';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-family: $font-family-main;
+    font-size: $font-size-main;
+    background: linear-gradient(#ffddcc, #434c43);
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &_half {
+        max-width: $container-width / 2;
+        margin: 10px;
+    }
+}
+
+.header {
+    padding: 28px 0;
+    background: #434c43;
+    color: #ffccff;
+    // display: flex;
+    // justify-content: $justify;
+
+    &__title {
+        position: relative;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+}
+
+.title {
+    &__logo {
+        width: 44px;
+        height: 44px;
+        color: #ffddff;
+    }
+}
+
+.btn {
+    @extend %btn-shared;
+
+    &_red {
+        // @extend .btn;
+        background: #e71e08;
+         transition: all 0.3s;
+        &-darker {
+            &:hover {
+                background: darken(#e71e08, 10%);
+            }
+        }
+
+        &-lighten {
+            &:hover {
+                background: lighten(#e71e08, 8%);
+            }
+        }
+    }
+}
+
+.section_2 {
+    @include flex-center(space-between, center);
+}
+
+.section_3 {
+    @include flex-center(flex-start, center);
+}
