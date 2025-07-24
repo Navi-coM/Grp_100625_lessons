@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #fff;
+  font-size: 16px;
+}
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 23px 0;
+  border-bottom: 1px solid #EFEEF3;
+}
+
+.img-svg {
+  width: 100px;
+}
+
+.icon .layer_1 {
+  fill: red;
+}
+
+.icon .layer_2 {
+  fill: yellow;
+}
+
+.icon:hover .layer_1 {
+  fill: yellow;
+}
+
+.icon:hover .layer_2 {
+  fill: black;
+}
+
+.icon:hover .layer_3 {
+  fill: #484de0;
+}
+
+.footer {
+  background: #16133D;
+  padding: 40px 0;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  background: #EFEEF3;
+  border-radius: 5px;
+}
+
+/* ---------- Стилі для іконок зі спрайту----------- */
+.social__link:hover .social__icon {
+  fill: #f90505;
+}
+
+.social__icon {
+  fill: #91fa21;
+}/*# sourceMappingURL=main.css.map */
