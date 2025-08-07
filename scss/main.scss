@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import 'vars';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+ul,
+ol,
+dl {
+    padding-left: 0;
+    margin: 0 0;
+    list-style: none;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: Lato, sans-serif;
+    font-size: $font_size_main;
+}
+
+body {
+    color: $font_color_main;
+    min-height: 100vh;
+}
+
+.header,
+.banner,
+.blog,
+.footer {
+    padding: 0 calc(50vw - $adaptive_width_container);
+
+    @media screen and (max-width: 1200px) {
+        padding: 0 calc(50vw - calc($adaptive_width_container - 12%));
+    }
+
+    @media screen and (max-width: 992px) {
+        padding: 0 calc(50vw - calc($adaptive_width_container - 27%));
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.8vw;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+.logo {
+    &__img {
+        max-width: 118px;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+
+    @media screen and (max-width: 992px) {
+        order: 2;
+        flex-grow: 0;
+    }
+}
+
+.search {
+    @media screen and (max-width: 992px) {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        padding-right: 15px;
+    }
+}
+
+.menu {
+    display: flex;
+    gap: 2.5vw;
+    padding: 0 30px;
+
+    @media screen and (max-width: 992px) {
+        position: absolute;
+        right: -100%;
+        top: 68px;
+        width: 340px;
+        // visibility: hidden;
+        flex-direction: column;
+        background-color: #aacedc;
+        z-index: 2;
+        transition: all 0.6s;
+        padding: 0 0;
+        gap: 0;
+
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $font_color_title;
+        font-size: 0.788rem;
+        letter-spacing: 0.3em;
+
+    }
+
+    &__item {
+        @media screen and (max-width: 992px) {
+            text-align: center;
+            padding: 15px 0;
+            border: 1px solid #fff;
+        }
+
+    }
+}
+
+.burger {
+    display: none;
+
+    @media screen and (max-width: 992px) {
+        &:checked~.menu {
+            // visibility: visible;
+            right: 0;
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @media screen and (max-width: 992px) {
+            display: inline-block;
+            position: relative;
+            top: -3px;
+            width: 34px;
+            height: 2px;
+            background-color: #000;
+            vertical-align: middle;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #000;
+                top: 10px;
+            }
+
+            &::after {
+                top: -10px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.banner {
+    background: url('../assets/img/bg-image.png') no-repeat;
+    background-size: cover;
+    min-height: calc(85vh - 100px);
+    padding-top: 100px;
+
+    @media screen and (min-width: 1580px) {
+        background-position-y: 37%;
+        min-height: calc(77vh - 100px);
+    }
+
+    &__title {
+        font-family: "Red Hat Display", serif;
+        font-size: 3rem;
+        line-height: 1.33;
+        color: $font_color_title;
+        max-width: 770px;
+        letter-spacing: 0.05rem;
+
+        @media screen and (max-width: 992px) {
+            font-size: 2.34rem;
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 2rem;
+        }
+    }
+
+}
