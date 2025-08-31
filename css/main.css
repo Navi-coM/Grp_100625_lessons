@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  font-size: 17px;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #edf6f7;
+  background: linear-gradient(45deg, #7d8e94, #0c3446);
+}
+
+.header {
+  padding: 18px 0;
+}/*# sourceMappingURL=main.css.map */
