@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesson_31 DOM & Event</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- початок бади -->
+            <header class="header container" id="header">
+                <h1 class="header__title">DOM JavaScript from Beetroot!</h1>
+            </header>
+            <main class="main">
+                <button class="btn_lang" id="btn_lang" data-action="change"
+                    onclick="changeAttrLanguage()">Change Attribute
+                    lang</button>
+                <div class="btns" id="btns-action">
+                    <a href="#" class="btn btn_action" data-purpose="action">Start</a>
+                    <a href="#" class="btn btn_action" data-purpose="action">Finish</a>
+                    <a href="#" class="btn btn_action" data-purpose="action">Change</a>
+                    <a href="#" class="btn btn_action" data-purpose="action">Send</a>
+                </div>
+                <input type="text" placeholder="Amount UAH">
+                <div class="btns" id="btns-currency">
+                    <a
+                        href="#"
+                        class="btn"
+                        id="btn-usd"
+                        data-currency="42.2"
+                        data-title="dollar">USD</a>
+                    <a
+                        href="#"
+                        class="btn"
+                        id="btn-eur"
+                        data-currency="48.5"
+                        data-title="euro">EUR</a>
+                    <a
+                        href="#"
+                        class="btn"
+                        id="btn-zlot"
+                        data-currency="10.8"
+                        data-title="zlotuj">Zlot</a>
+                </div>
+                <section class="text">
+                    <h2>Title</h2>
+                    <p class="first-par">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Voluptas recusandae rerum dicta est
+                        quas culpa fuga quae molestiae in autem esse ipsum
+                        maxime quia ut, obcaecati ducimus perferendis, veritatis
+                        aut numquam! Harum commodi rem repudiandae laboriosam
+                        veritatis impedit, aperiam tenetur qui iusto ipsum ipsa
+                        nisi ipsam beatae autem doloribus molestias quae, enim
+                        quod eaque, labore possimus deserunt quisquam
+                        accusantium? Esse?</p>
+                </section>
+                <section class="text">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptas recusandae rerum dicta est quas culpa fuga quae
+                        molestiae in autem esse ipsum maxime quia ut, obcaecati
+                        ducimus perferendis, veritatis aut numquam! Harum
+                        commodi rem repudiandae laboriosam veritatis impedit,
+                        aperiam tenetur qui iusto ipsum ipsa nisi ipsam beatae
+                        autem doloribus molestias quae, enim quod eaque, labore
+                        possimus deserunt quisquam accusantium? Esse?</p>
+                </section>
+                <section class="text"></section>
+                <!-- Блок текст -->
+                <section class="text" id="paragraphs">
+                    <h2 class="title_2">Event Lesson</h2>
+                    <p class="pharagraph">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Voluptas recusandae rerum dicta est
+                        quas culpa fuga quae molestiae in autem esse ipsum
+                        maxime quia ut, obcaecati ducimus perferendis, veritatis
+                        aut numquam! Harum commodi rem repudiandae laboriosam
+                        veritatis impedit, aperiam tenetur qui iusto ipsum ipsa
+                        nisi ipsam beatae autem doloribus molestias quae, enim
+                        quod eaque, labore possimus deserunt quisquam
+                        accusantium? Esse?</p>
+                    <p class="pharagraph">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Voluptas recusandae rerum dicta est
+                        quas culpa fuga quae molestiae in autem esse ipsum
+                        maxime quia ut, obcaecati ducimus perferendis, veritatis
+                        aut numquam! Harum commodi rem repudiandae laboriosam
+                        veritatis impedit, aperiam tenetur qui iusto ipsum ipsa
+                        nisi ipsam beatae autem doloribus molestias quae, enim
+                        quod eaque, labore possimus deserunt quisquam
+                        accusantium? Esse?</p>
+                    <p class="pharagraph">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Voluptas recusandae rerum dicta est
+                        quas culpa fuga quae molestiae in autem esse ipsum
+                        maxime quia ut, obcaecati ducimus perferendis, veritatis
+                        aut numquam! Harum commodi rem repudiandae laboriosam
+                        veritatis impedit, aperiam tenetur qui iusto ipsum ipsa
+                        nisi ipsam beatae autem doloribus molestias quae, enim
+                        quod eaque, labore possimus deserunt quisquam
+                        accusantium? Esse?</p>
+                </section>
+                <section class="new-el" id="new-el">
+                    <a class="create-link" data-tagname="a"
+                        onclick="alert(`${this.tagName}`)">Create a</a>
+                    <a class="create-link" data-tagname="p">Create p</a>
+                    <a class="create-link" data-tagname="div">Create div</a>
+                </section>
+            </main>
+        </div>
+
+        <script src="./js/dom.js"></script>
+        <!-- <script src="./js/event.js"></script> -->
+    </body>
+</html>
