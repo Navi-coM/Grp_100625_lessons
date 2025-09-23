@@ -19,4 +19,29 @@ html, body {
 
 .header {
   padding: 18px 0;
+}
+
+.test-btn {
+  margin: 30px 0;
+  padding: 20px;
+  border: 1px solid rgba(255, 221, 255, 0.8431372549);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn_lang {
+  min-width: 180px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(74, 185, 226, 0.9176470588);
+  border: none;
+  box-shadow: -1px 7px 9px 0px #0f3635;
+  cursor: pointer;
+}
+
+.background-blue {
+  background: #178fd4;
 }/*# sourceMappingURL=main.css.map */

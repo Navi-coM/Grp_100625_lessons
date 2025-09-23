@@ -13,16 +13,26 @@
                 <h1 class="header__title">DOM JavaScript from Beetroot!</h1>
             </header>
             <main class="main">
-                <button class="btn_lang" id="btn_lang" data-action="change"
+                <div class="test-btn">
+                    <button class="btn_lang" id="btn_lang" data-action="change"
                     onclick="changeAttrLanguage()">Change Attribute
                     lang</button>
+
+                    <button class="btn_lang" id="btn-change-color">
+                        Change Color
+                    </button>
+                    <button class="btn_lang" id="btn-reset-color">
+                        Reset Color
+                    </button>
+                </div>
+                
                 <div class="btns" id="btns-action">
                     <a href="#" class="btn btn_action" data-purpose="action">Start</a>
                     <a href="#" class="btn btn_action" data-purpose="action">Finish</a>
                     <a href="#" class="btn btn_action" data-purpose="action">Change</a>
                     <a href="#" class="btn btn_action" data-purpose="action">Send</a>
                 </div>
-                <input type="text" placeholder="Amount UAH">
+                <input type="text" placeholder="Amount UAH" id="inpt-amount">
                 <div class="btns" id="btns-currency">
                     <a
                         href="#"
@@ -107,7 +117,7 @@
             </main>
         </div>
 
-        <script src="./js/dom.js"></script>
-        <!-- <script src="./js/event.js"></script> -->
+        <!-- <script src="./js/dom.js"></script> -->
+        <script src="./js/event.js"></script>
     </body>
 </html>
