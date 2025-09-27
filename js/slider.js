@@ -3,11 +3,11 @@ $(document).ready(function(){
     arrows: false,
     dots: true,
 
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4500,
     speed: 1500,
     infinite: true,
-     fade: true,
+    fade: true,
 
      responsive: [
             {
