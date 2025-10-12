@@ -1,0 +1,17 @@
+{
+  "name": "gulp_project_1",
+  "version": "1.0.0",
+  "description": "First project for Gulp",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivan Vasylenko",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-file-include": "^2.3.0"
+  }
+}
