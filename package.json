@@ -1,0 +1,30 @@
+{
+  "name": "webpack_project_1",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "serve": "webpack serve --open",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Ivan Vasylenko",
+  "license": "ISC",
+  "description": "First project from Webpack",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.4",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21"
+  }
+}
