@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ------------- TODO List Custom style---------------------------- */
+
+.title_1 {
+  font-size: 30px;
+  text-decoration: underline;
+}
