@@ -2,8 +2,9 @@ import TodoItem from './TodoItem';
 import '../App.css';
 
 function TodoList({ todos, onDeleteTodo }) {
+    
     return (
-       <ul className='list'>
+       <ul className='min-w-md'>
         { todos.length === 0 ? (
             <p>Your todo list is empty</p>
         ) : (
