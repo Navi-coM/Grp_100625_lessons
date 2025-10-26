@@ -19,35 +19,53 @@ function App() {
   //     })
   // }, []);
 
-  useEffect(()=>{
-    const URL = 'https://jsonplaceholder.typicode.com/todos?_limit=3';
-    const fetchToDos = async () => {
-      try{
-        const response = await axios.get(URL);
-        setTodos(response.data)
-      } catch (err) {
-        console.log(err)
-      } 
-    };
-    fetchToDos();
+  useEffect(() => {
+    const saveTodos = localStorage.getItem('todos');
+    
+    
+    if (saveTodos) {
+      setTodos(JSON.parse(saveTodos))
+    } else {
+      
+      const URL = 'https://jsonplaceholder.typicode.com/todos?_limit=0';
+      const fetchToDos = async () => {
+        try {
+          const response = await axios.get(URL);
+          setTodos(response.data)
+        } catch (err) {
+          console.log(err)
+        }
+      };
+      fetchToDos();
+    }
   }, [])
 
-  const addTodo = (title) => {
+  // useEffect(() => {
+  //   localStorage.setItem('todos', JSON.stringify(todos))
+  // }, [todos]);
+
+  const addTodo = (title, category) => {
     let count = todos.length + 1;
     const newTodo = {
-      id: count, title
+      id: count, title, category
     };
     setTodos([...todos, newTodo]);
   }
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id))
+    const updateTodos = todos
+      .filter((todo) => todo.id !== id)
+      .map((todo, index) => ({
+        ...todo,
+        id: index + 1,
+      }))
+    setTodos(updateTodos);
   }
 
   const sortTodos = () => {
     const sorted = [...todos].sort((a, b) => {
-      if(a.title.toLowerCase() < b.title.toLowerCase()) return sortAsc ? -1 : 1;
-      if(a.title.toLowerCase() > b.title.toLowerCase()) return sortAsc ? 1 : -1;
+      if (a.title.toLowerCase() < b.title.toLowerCase()) return sortAsc ? -1 : 1;
+      if (a.title.toLowerCase() > b.title.toLowerCase()) return sortAsc ? 1 : -1;
       return 0;
     })
     setTodos(sorted);
@@ -55,9 +73,9 @@ function App() {
   }
 
   return (
-    <div className="bg-grey p-5 flex flex-col items-center">
+    <div className="bg-gray-500 p-6 flex flex-col items-center rounded-xl">
       <h1 className='text-2xl font-bold text-center mb-4'>My Todo List</h1>
-      <TodoForm onAddTodo = {addTodo}/>
+      <TodoForm onAddTodo={addTodo} />
       <button onClick={sortTodos} className='bg-sky-500/50 py-2 px-4 rounded-xl mb-5'>Sort {sortAsc ? 'A - Z' : 'Z - A'}</button>
       <TodoList todos={todos} onDeleteTodo={deleteTodo} />
     </div>
@@ -66,6 +84,8 @@ function App() {
 
 export default App;
 
+
+// ----------------------------------------------------------------
 
 // let todos = [
 // {1, 'Купити хліб', false},
