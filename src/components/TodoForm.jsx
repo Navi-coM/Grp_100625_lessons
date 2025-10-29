@@ -17,7 +17,7 @@ function TodoForm({ onAddTodo }) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className='form mb-5 w-4xl flex justify-between'>
+        <form onSubmit={handleSubmit} className='form mb-5 w-4xl flex gap-[12px] justify-between'>
             <input 
                 type='text' 
                 value={title} 

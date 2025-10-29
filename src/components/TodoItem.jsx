@@ -8,10 +8,10 @@ const categoryColors = {
 };
 function TodoItem({ todo, onDeleteTodo }) {
     return (
-      <li className={`px-6 py-3 flex justify-between border items-center `}>
+      <li className={`px-6 py-3 flex justify-between items-center shadow shadow-sky-300`}>
         <span class="mr-3">{todo.id}.</span>
         <span class="grow text-start">{todo.title}</span>
-        <span className={`text-xs mt-1 px-3 py-1.5 rounded-full self-start mx-3 ${categoryColors[todo.category]}`}>{todo.category}</span>
+        <span className={`w-34  text-xs mt-1 px-3 py-1.5 rounded-full self-start mx-3 ${categoryColors[todo.category]}`}>{todo.category}</span>
         <button onClick={() => onDeleteTodo(todo.id)} className='bg-sky-500/50 py-1 px-3 rounded-xl'>Delete</button>
       </li>
     )

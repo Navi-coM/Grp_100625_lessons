@@ -4,12 +4,12 @@ import '../App.css';
 function TodoList({ todos, onDeleteTodo }) {
     
     return (
-       <ul className='min-w-md w-full'>
+       <ul className='min-w-md w-full gap-x-[10px]'>
         { todos.length === 0 ? (
             <p>Your todo list is empty</p>
         ) : (
             todos.map((todo) => (
-                <TodoItem key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo}/>
+                <TodoItem key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo} />
             ))
         )}
        </ul>
